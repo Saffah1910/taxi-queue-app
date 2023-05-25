@@ -41,7 +41,7 @@ function TaxiQueue() {
 			peopleQueue = peopleQueue - 12;
 		}
 		else {
-			return "no enough passengers to depart"
+			return "not enough passengers to depart"
 		}
 
 	}

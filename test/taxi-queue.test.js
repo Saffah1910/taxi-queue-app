@@ -185,4 +185,7 @@ describe('The taxi queue app', function() {
 		assert.equal(15, taxiQueue.queueLength());
 
 	});
+	it("store counter in local storage",function(){
+
+	})
 });
