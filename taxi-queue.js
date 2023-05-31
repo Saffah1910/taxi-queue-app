@@ -12,6 +12,7 @@ function TaxiQueue() {
 
 	function joinQueue() {
 		peopleQueue++
+		localStorage["passenger"] = peopleQueue;
 
 	}
 
@@ -19,11 +20,15 @@ function TaxiQueue() {
 		if (peopleQueue > 0) {
 			peopleQueue--
 		}
+		localStorage["passenger"] = peopleQueue;
+
 
 	}
 
 	function joinTaxiQueue() {
 		taxiCounter++
+
+		localStorage["taxi"] = taxiCounter;
 
 	}
 
@@ -37,21 +42,30 @@ function TaxiQueue() {
 
 	function taxiDepart() {
 		if (peopleQueue >= 12 && taxiCounter !== 0) {
-			taxiCounter =	taxiCounter - 1;
+			taxiCounter = taxiCounter - 1;
 			peopleQueue = peopleQueue - 12;
 		}
-		else {
-			return "not enough passengers to depart"
-		}
+		
+
+		localStorage["passenger"] = peopleQueue;
+		localStorage["taxi"] = taxiCounter;
 
 	}
 
 	function taxiQueueLength() {
-	
-			return taxiCounter
 
-		
-	
+		return taxiCounter
+
+
+
+	}
+
+	function storage() {
+		peopleQueue = Number(localStorage["passenger"]);
+		taxiCounter = Number(localStorage["taxi"]);
+	}
+	function addRed(){
+		return "red"
 	}
 
 	return {
@@ -60,6 +74,8 @@ function TaxiQueue() {
 		joinTaxiQueue,
 		queueLength,
 		taxiQueueLength,
-		taxiDepart
+		taxiDepart,
+		storage,
+		addRed
 	}
 }

@@ -1,6 +1,25 @@
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: darkgray
+	/* background-color: darkgray; */
+	background-image: url(./taxiBG.jpg);
+	background-size: cover;
+	position: relative;
+
+}
+body h1{
+	color: #fff;
+    text-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500, 0 0 30px #ffa500, 0 0 40px #ffa500, 0 0 50px #ffa500, 0 0 60px #ffa500, 0 0 70px #ffa500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+	text-align: center;
+/* 	
+	font-size: 80px;
+	font-weight: 700;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-image: url('./heading.jpg');
+	text-align: center; */
 }
 
 
@@ -8,13 +27,14 @@ body {
 	font-size: 4em;
 	padding: 0.1em;
 	border: 2px solid;
-	background-color: orchid;
+	background-color: #f9a620;
 	border-radius: 0.1em;
 }
 
 .section {
 	flex: 1;
-	background-color: steelblue;
+	background-color: #fff75e;
+	border: 3px solid yellow;
 	padding: 2em;
 	margin: 1em;
 	border-radius: 0.5em;
@@ -24,6 +44,21 @@ button {
 	padding: 1em;
 	border-radius: 0.5em;
 	font-weight: bold;
+}
+button:hover{
+	background-color: #0b0c0c;
+	color: white;
+}
+.red{
+	border: 1px solid;
+	margin: 0 auto;
+	padding: 15px 10px 15px 50px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	background-color: #ff9b85;
+	background-image: url('../css/error.jpg');
+	width: fit-content;
+	color: #c1121f;
 }
 
 @media (min-width: 768px) {
