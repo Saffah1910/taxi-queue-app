@@ -56,7 +56,7 @@ button:hover{
 	background-repeat: no-repeat;
 	background-position: 10px center;
 	background-color: #ff9b85;
-	background-image: url('../css/error.jpg');
+	background-image: url('./error.jpg');
 	width: fit-content;
 	color: #c1121f;
 }
