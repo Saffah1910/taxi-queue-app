@@ -54,7 +54,7 @@ departBtn.addEventListener("click", function () {
     taxiCounter.innerHTML = taxiQueue.taxiQueueLength();
     passengerCountElem.innerHTML = taxiQueue.queueLength();
     
-    if (taxiQueue.queueLength() < 12) {
+    if (taxiQueue.queueLength() < 12 && taxiQueue.taxiQueueLength() !== 0) {
         hiddenMessageElem.classList.add(taxiQueue.addRed());
         hiddenMessageElem.innerHTML = "not enough passesngers to depart";
         hiddenMessageElem.style.display = "block";
